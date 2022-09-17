@@ -1,0 +1,72 @@
+* {
+    font-family: 'Fraunces', serif;
+    color: #fff;
+}
+
+body {
+    margin: 0;
+    background-color: #325175;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 160px repeat(5, 75px);
+    background-color: #797777;
+    padding: 15px;
+    border-radius: 32px;
+    box-shadow: 15px 10px 0px 5px #00000033;
+}
+
+button {
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 32px;
+    font-size: 1.5em;
+    border: none;
+    background-color: #6F6E6E;
+    box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #5E5E5E;
+}
+
+button:active { /*cuando precionamos el boton se oscurece*/
+    background-color: #504F4F;
+}
+
+button:focus { /*sacamos linea que rodea el boton*/
+    outline: none;
+}
+
+.display {
+    grid-column: 1 / -1; /*ancho total del display*/
+    padding: 16px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    align-items: flex-end; /*mueve los resultados a la derecha*/
+    background-color: #252525;
+    border-radius: 32px;
+    text-align: right;
+    justify-content: space-between; /*separa nuestros valores*/
+    word-break: break-all;
+    box-shadow: 0px 0px 0px 10px #00000033;
+}
+
+.column-2 {
+    grid-column: span 2; /*expande a 2 columnas boton C y 0*/
+}
+
+#valor-actualy {
+    font-size: 1.5em;
+}
+
+#valor-before {
+    font-size: 2em;
+}
